@@ -1,13 +1,124 @@
 body {
+  background: #202124;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  text-align: center;
+  color: #808e9b;
+  position: relative;
+}
+h1::before{
+  content: '';
+  position: absolute;
+  background: #cc8e35;
+  width: 100px;
+  height: 2px;
+  bottom: -5px;
+  transform: translate(25%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.input_div{
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input_div_inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #808e9b;
+}
+input {
+  border: none;
+  color: #808e9b;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  width: 375px;
+  font-weight: bold;
+}
+
+::placeholder {
+  font-size: 15px;
+}
+
+button {
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid #846CA5;
+  padding: 10px 30px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #846CA5;
+}
+
+.list_div{
+  /* background: yellow; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+}
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ol li {
+  font-size: 20px;
+  color: #8566aa;
+  margin-left: 40px;
+}
+
+.todo_style{
+  /* background: blue; */
+  width: 50%;
+  /* width: 300px; */
+  position: relative;
+  margin: 15px auto;
+  padding: 0 40px;
+  border: 1px solid #846CA5;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.todo_style .fa-times-circle:hover{
+  transform: scale(1.2);
+}
+
+p{
+  border-radius: 5px;
+  background: red;
+  padding: 8px 15px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+p:hover{
+  transform: scale(1.05);
+}
+
+@media screen and (max-width : 800px) {
+
+  button {
+    padding: 8px 15px;
+  }
+  .todo_style {
+    width: 70%;
+  }
+  .input_div_inner{
+    width: 100%;
+  }
 }
